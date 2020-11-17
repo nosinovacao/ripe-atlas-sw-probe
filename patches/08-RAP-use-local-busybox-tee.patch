@@ -1,0 +1,14 @@
+Index: 1.0-r0/git/bin/arch/linux/linux-functions.sh
+===================================================================
+--- 1.0-r0.orig/git/bin/arch/linux/linux-functions.sh
++++ 1.0-r0/git/bin/arch/linux/linux-functions.sh
+@@ -161,3 +161,9 @@ set_date_from_currenttime_txt()
+ 		echo no file $STATUS_DIR/currenttime.txt
+ 	fi
+ }
++
++tee()
++{
++	 $BB_BASE_DIR/usr/bin/tee "$@"
++}
++

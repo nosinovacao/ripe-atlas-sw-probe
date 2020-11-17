@@ -1,0 +1,39 @@
+Index: 1.0-r0/git/bin/arch/debian-sw-probe/debian-sw-probe-common.sh
+===================================================================
+--- 1.0-r0.orig/git/bin/arch/debian-sw-probe/debian-sw-probe-common.sh
++++ 1.0-r0/git/bin/arch/debian-sw-probe/debian-sw-probe-common.sh
+@@ -5,5 +5,6 @@ ATLASINIT=$BB_BIN_DIR/atlasinit; export
+ KNOWN_HOSTS_REG=$RPM_ETC_DIR/known_hosts.reg
+ REG_SERVERS=$BASE_DIR/bin/reg_servers.sh  
+ 
++SSH_DIR=/nvram/.ssh; export SSH_DIR
+ # Commands
+ SET_LEDS_CMD=:
+Index: 1.0-r0/git/bin/arch/debian-sw-probe/debian-sw-probe-reginit.sh
+===================================================================
+--- 1.0-r0.orig/git/bin/arch/debian-sw-probe/debian-sw-probe-reginit.sh
++++ 1.0-r0/git/bin/arch/debian-sw-probe/debian-sw-probe-reginit.sh
+@@ -19,8 +19,8 @@ SSH_CMD_EXEC=ssh_exec
+ SSH_OPT=''
+ TELNETD_PORT=2023
+ 
+-NETCONFIG_V4_DEST=$HOME/etc/netconfig_v4.sh
+-NETCONFIG_V6_DEST=$HOME/etc/netconfig_v6.sh
++NETCONFIG_V4_DEST=$ATLAS_BASE/etc/netconfig_v4.sh
++NETCONFIG_V6_DEST=$ATLAS_BASE/etc/netconfig_v6.sh
+ P_TO_R_INIT_IN=$STATUS_DIR/p_to_r_init.in.vol
+ 
+ if [ ! -n "$STATE_FILE" ] ; then
+Index: 1.0-r0/git/build-config/debian/bin/make-deb
+===================================================================
+--- 1.0-r0.orig/git/build-config/debian/bin/make-deb
++++ 1.0-r0/git/build-config/debian/bin/make-deb
+@@ -86,7 +86,7 @@ After=network-online.target syslog.targe
+ [Service]
+ User=root
+ Group=nogroup
+-Environment=HOME=/$var_atlas_rel
++Environment=HOME=/home/root
+ WorkingDirectory=/$var_atlas_rel
+ ExecStart=/usr/local/atlas/bin/ATLAS
+ Restart=always

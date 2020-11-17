@@ -1,0 +1,12 @@
+Index: 1.0-r0/git/bin/arch/debian-sw-probe/debian-sw-probe-ATLAS.sh
+===================================================================
+--- 1.0-r0.orig/git/bin/arch/debian-sw-probe/debian-sw-probe-ATLAS.sh
++++ 1.0-r0/git/bin/arch/debian-sw-probe/debian-sw-probe-ATLAS.sh
+@@ -65,6 +65,7 @@ if [ ! -f "$BASE_DIR"/etc/probe_key ]; t
+     mkdir -p "$BASE_DIR"/etc
+     #ssh-keygen -t rsa -b 2048 -P '' -C $name -f "$BASE_DIR"/etc/probe_key
+     #chown -R atlas:atlas "$BASE_DIR"/etc
++    dropbearkey -t rsa -s 2048 -f "$BASE_DIR"/etc/probe_key
+ fi
+ 
+ while :

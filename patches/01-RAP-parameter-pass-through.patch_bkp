@@ -1,0 +1,74 @@
+diff -u -r git.orig/git/bin/arch/debian-sw-probe/debian-sw-probe-ATLAS.sh git/git/bin/arch/debian-sw-probe/debian-sw-probe-ATLAS.sh
+--- git.orig/git/bin/arch/debian-sw-probe/debian-sw-probe-ATLAS.sh	2019-12-02 11:48:12.583700698 +0000
++++ git/git/bin/arch/debian-sw-probe/debian-sw-probe-ATLAS.sh	2019-12-02 15:35:07.410158186 +0000
+@@ -63,8 +63,8 @@
+ if [ ! -f "$BASE_DIR"/etc/probe_key ]; then
+     name=$(hostname -s)
+     mkdir -p "$BASE_DIR"/etc
+-    ssh-keygen -t rsa -b 2048 -P '' -C $name -f "$BASE_DIR"/etc/probe_key
+-    chown -R atlas:atlas "$BASE_DIR"/etc
++    #ssh-keygen -t rsa -b 2048 -P '' -C $name -f "$BASE_DIR"/etc/probe_key
++    #chown -R atlas:atlas "$BASE_DIR"/etc
+ fi
+ 
+ while :
+@@ -99,6 +99,6 @@
+ 		# ready to go
+ 		break
+ 	fi
+-	echo '/var/atlasdata is not mounted' >&2
+-	sleep 60
++	echo '/var/atlasdata is not mounted. Mounting...' >&2
++    mount -t tmpfs tmpfs /var/atlasdata 
+ done
+diff -u -r git.orig/git/build-config/debian/bin/make-deb git/git/build-config/debian/bin/make-deb
+--- git.orig/git/build-config/debian/bin/make-deb	2019-11-27 10:47:41.331447566 +0000
++++ git/git/build-config/debian/bin/make-deb	2019-12-04 10:31:13.752489479 +0000
+@@ -28,16 +28,19 @@
+ # Build
+ (
+ 	cd "$builddir/probe-busybox/libevent-2.1.11-stable"
+-	autoreconf --install
+-	./configure
++	autoreconf --install 
++	./configure $@
+ 	make
+ 	cd ..
+-	make
++	
++	echo +++++++++++++ $EXTRA_OEMAKE2 ++++++++++++++++++++++++++
++	
++	make -j 8 CC='i686-rdk-linux-gcc -m32 -march=core2 -mtune=core2 -msse3 -mfpmath=sse -fno-omit-frame-pointer -fno-optimize-sibling-calls --sysroot=/data/nos/puma7-build-rdkbos/rdkb-llc-r7.2.1ga/atom_rdkbos/build-chita-hub5/tmp/sysroots/chita-hub5' LD='i686-rdk-linux-gcc -m32 -march=core2 -mtune=core2 -msse3 -mfpmath=sse -fno-omit-frame-pointer -fno-optimize-sibling-calls --sysroot=/data/nos/puma7-build-rdkbos/rdkb-llc-r7.2.1ga/atom_rdkbos/build-chita-hub5/tmp/sysroots/chita-hub5' V=1 ARCH=i686 CROSS_COMPILE=i686-rdk-linux- SKIP_STRIP=y
+ )
+ 
+ # Install
+ (
+ 	cd "$builddir/probe-busybox"
+-	make install
++	make -j 8 CC='i686-rdk-linux-gcc -m32 -march=core2 -mtune=core2 -msse3 -mfpmath=sse -fno-omit-frame-pointer -fno-optimize-sibling-calls --sysroot=/data/nos/puma7-build-rdkbos/rdkb-llc-r7.2.1ga/atom_rdkbos/build-chita-hub5/tmp/sysroots/chita-hub5' LD='i686-rdk-linux-gcc -m32 -march=core2 -mtune=core2 -msse3 -mfpmath=sse -fno-omit-frame-pointer -fno-optimize-sibling-calls --sysroot=/data/nos/puma7-build-rdkbos/rdkb-llc-r7.2.1ga/atom_rdkbos/build-chita-hub5/tmp/sysroots/chita-hub5' V=1 ARCH=i686 CROSS_COMPILE=i686-rdk-linux- SKIP_STRIP=y install 
+ 	mkdir -p "$sta_atlas_local/bb-13.3"
+ 	cp -r ./_install/* "$sta_atlas_local/bb-13.3"
+@@ -49,6 +52,8 @@
+ )
+ 
+ (
++    echo "$sta_atlas_local"
++    
+ 	cd "$srcdir"
+ 	cp bin/ATLAS "$sta_atlas_local/bin"
+ 	cp bin/common-pre.sh "$sta_atlas_local/bin"
+@@ -79,7 +84,7 @@
+ After=network-online.target syslog.target
+ 
+ [Service]
+-User=atlas
++User=root
+ Group=nogroup
+ Environment=HOME=/$var_atlas_rel
+ WorkingDirectory=/$var_atlas_rel
+@@ -128,4 +133,4 @@
+ 
+ chmod -R og+rX,ugo-st "$stadir"
+ 
+-fakeroot dpkg-deb --build atlasswprobe-$VERSION
++#fakeroot dpkg-deb --build atlasswprobe-$VERSION

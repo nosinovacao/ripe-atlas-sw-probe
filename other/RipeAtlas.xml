@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dataModelInfo>
+  <version>1</version>
+  <moduleName>Ripe Atlas Agent</moduleName>
+  <author>NOS Inovação</author>
+  <description></description>
+  <library />
+  <objects>
+    <object>
+      <baseObjName>Device.Services.</baseObjName>
+      <name>X_NOS_PT_AtlasRipe</name>
+      <objectType>object</objectType>
+      <functions>
+        <func_GetParamBoolValue>AtlasRipe_GetParamBoolValue</func_GetParamBoolValue>
+        <func_SetParamBoolValue>AtlasRipe_SetParamBoolValue</func_SetParamBoolValue>
+        <func_GetParamStringValue>AtlasRipe_GetParamStringValue</func_GetParamStringValue>  
+        <func_Commit>AtlasRipe_Commit</func_Commit>
+        <func_Rollback>AtlasRipe_Rollback</func_Rollback>
+      </functions>
+      <parameters>
+        <parameter>
+          <name>Enable</name>
+          <type>boolean</type>
+          <syntax>bool</syntax>
+          <writable>true</writable>
+        </parameter>
+        <parameter>
+          <name>Status</name>
+          <type>string</type>
+          <syntax>string(16)</syntax>
+          <writable>false</writable>
+        </parameter>
+        <parameter>
+          <name>Key</name>
+          <type>string</type>
+          <syntax>string(512)</syntax>
+          <writable>false</writable>
+        </parameter>
+      </parameters>
+    </object>
+  </objects>
+</dataModelInfo>

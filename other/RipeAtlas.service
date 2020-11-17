@@ -1,0 +1,17 @@
+[Unit]
+Description=Ripe Atlas agent
+
+Requires=gwprovapp.service
+After=gwprovapp.service
+
+[Service]
+WorkingDirectory=/usr/ccsp/ripe-atlas
+Environment="Subsys=eRT."
+Environment="LOG4C_RCPATH=/etc"
+EnvironmentFile=/etc/device.properties
+Type=forking
+ExecStartPre=/bin/bash /usr/local/atlas/BootScript.sh
+ExecStart=/usr/bin/CcspRipeAtlas -subsys $Subsys
+
+[Install]
+WantedBy=multi-user.target

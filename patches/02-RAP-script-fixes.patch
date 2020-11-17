@@ -1,0 +1,27 @@
+Index: 1.0-r0/git/bin/arch/linux/linux-functions.sh
+===================================================================
+--- 1.0-r0.orig/git/bin/arch/linux/linux-functions.sh
++++ 1.0-r0/git/bin/arch/linux/linux-functions.sh
+@@ -23,11 +23,11 @@ dfrm()
+ }
+ evping()
+ {
+-	$BB_BIN_DIR/evping "$@"
++	$BB_BIN_DIR/evping -4 "$@"
+ }
+ evping_no_check()
+ {
+-	ATLAS_DISABLE_CHECK_ADDR=yes $BB_BIN_DIR/evping "$@"
++	ATLAS_DISABLE_CHECK_ADDR=yes $BB_BIN_DIR/evping -4 "$@"
+ }
+ httppost()
+ {
+@@ -142,7 +142,7 @@ ssh_exec()
+ }
+ get_ether_addr()
+ {
+-	set $(ip link | grep 'link\/ether' | head -1)
++	set $(ip link | grep 'link\/ether' | head -n 1)
+ 	ETHER_ADDR=$2; export ETHER_ADDR
+ 	ETHER_SCANNED=`echo $ETHER_ADDR | sed -e s/\://g`; export ETHER_SCANNED
+ }

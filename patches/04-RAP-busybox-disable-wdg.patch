@@ -1,0 +1,77 @@
+Index: 1.0-r0/git/probe-busybox/eperd/eperd.c
+===================================================================
+--- 1.0-r0.orig/git/probe-busybox/eperd/eperd.c
++++ 1.0-r0/git/probe-busybox/eperd/eperd.c
+@@ -196,6 +196,7 @@ static void my_exit(void)
+ 
+ static void kick_watchdog(void)
+ {
++#if 0
+ 	if(do_kick_watchdog) 
+ 	{
+ 		int fdwatchdog = open("/dev/watchdog", O_RDWR);
+@@ -205,6 +206,7 @@ static void kick_watchdog(void)
+ 			close(fdwatchdog);
+ 		}
+ 	}
++#endif
+ }
+ 
+ #if 0
+Index: 1.0-r0/git/probe-busybox/miscutils/perd.c
+===================================================================
+--- 1.0-r0.orig/git/probe-busybox/miscutils/perd.c
++++ 1.0-r0/git/probe-busybox/miscutils/perd.c
+@@ -224,12 +224,14 @@ static void my_exit(void)
+ 
+ static void kick_watchdog(void)
+ {
++#if 0
+ 	if(do_kick_watchdog) 
+ 	{
+ 		int fdwatchdog = open("/dev/watchdog", O_RDWR);
+ 		write(fdwatchdog, "1", 1);
+ 		close(fdwatchdog);
+ 	}
++#endif
+ }
+ 
+ int perd_main(int argc, char **argv) MAIN_EXTERNALLY_VISIBLE;
+Index: 1.0-r0/git/probe-busybox/networking/httppost.c
+===================================================================
+--- 1.0-r0.orig/git/probe-busybox/networking/httppost.c
++++ 1.0-r0/git/probe-busybox/networking/httppost.c
+@@ -1381,12 +1381,14 @@ static void got_alarm(int sig __attribut
+ 
+ static void kick_watchdog(void)
+ {
++#if 0
+ 	int fdwatchdog = open("/dev/watchdog", O_RDWR);
+ 	if (fdwatchdog != -1)
+ 	{
+ 		write(fdwatchdog, "1", 1);
+ 		close(fdwatchdog);
+ 	}
++#endif
+ }
+ 
+ static void fatal(const char *fmt, ...)
+Index: 1.0-r0/git/probe-busybox/networking/telnetd.c
+===================================================================
+--- 1.0-r0.orig/git/probe-busybox/networking/telnetd.c
++++ 1.0-r0/git/probe-busybox/networking/telnetd.c
+@@ -774,12 +774,14 @@ static void handle_sigchld(int sig UNUSE
+ 
+ static void kick_watchdog(void)
+ {
++#if 0
+ 	int fdwatchdog = open("/dev/watchdog", O_RDWR);
+ 	if (fdwatchdog != -1)
+ 	{
+ 		write(fdwatchdog, "1", 1);
+ 		close(fdwatchdog);
+ 	}
++#endif
+ }
+ 
+ int telnetd_main(int argc, char **argv) MAIN_EXTERNALLY_VISIBLE;

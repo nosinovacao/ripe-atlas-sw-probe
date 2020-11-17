@@ -1,0 +1,13 @@
+Index: 1.0-r0/git/bin/arch/linux/linux-functions.sh
+===================================================================
+--- 1.0-r0.orig/git/bin/arch/linux/linux-functions.sh
++++ 1.0-r0/git/bin/arch/linux/linux-functions.sh
+@@ -144,7 +144,7 @@ ssh_exec()
+ }
+ get_ether_addr()
+ {
+-	set $(ip link | grep 'link\/ether' | head -n 1)
++	set $(ip link show erouter0 | grep 'link\/ether' | head -n 1)
+ 	ETHER_ADDR=$2; export ETHER_ADDR
+ 	ETHER_SCANNED=`echo $ETHER_ADDR | sed -e s/\://g`; export ETHER_SCANNED
+ }

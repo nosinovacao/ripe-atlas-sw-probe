@@ -1,0 +1,98 @@
+Index: 1.0-r0/git/atlas-config/etc/known_hosts.reg
+===================================================================
+--- 1.0-r0.orig/git/atlas-config/etc/known_hosts.reg
++++ 1.0-r0/git/atlas-config/etc/known_hosts.reg
+@@ -1,20 +1,14 @@
+ reg03.atlas.ripe.net ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCqe2qSBtJqwT0R10cu0QOkanVWThaxc4Wp7mMS88kjLJgruxS0TKz73Jk9I0kNBjg3L8rY8SFAUBfEh7mD/4YRqIawo7yAQXRdiDXFaIp8RL63aZPebpbHtHwoYCKogRDnaCcdwmh1WHzwj0tStoTWRQ/9XVApQC5r4hsKMTelZqtczRq3o3gUSzkp7qPJRmDYsbox4BrSIT5lRoMDjSTVNlBFQFX98f0JbcmsQcDxaedoTAMUUMoMvoJHHtsf6sZ5NncCb99a8OanjZ7lytAJu2phkoasS46kY4a3QVrYABGtPAHKtuhDEsrGEZNCc6oz1kfN6lJQDMiJ16R3y2Cp
+ 193.0.19.246 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCqe2qSBtJqwT0R10cu0QOkanVWThaxc4Wp7mMS88kjLJgruxS0TKz73Jk9I0kNBjg3L8rY8SFAUBfEh7mD/4YRqIawo7yAQXRdiDXFaIp8RL63aZPebpbHtHwoYCKogRDnaCcdwmh1WHzwj0tStoTWRQ/9XVApQC5r4hsKMTelZqtczRq3o3gUSzkp7qPJRmDYsbox4BrSIT5lRoMDjSTVNlBFQFX98f0JbcmsQcDxaedoTAMUUMoMvoJHHtsf6sZ5NncCb99a8OanjZ7lytAJu2phkoasS46kY4a3QVrYABGtPAHKtuhDEsrGEZNCc6oz1kfN6lJQDMiJ16R3y2Cp
+-2001:67c:2e8:11::c100:13f6 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCqe2qSBtJqwT0R10cu0QOkanVWThaxc4Wp7mMS88kjLJgruxS0TKz73Jk9I0kNBjg3L8rY8SFAUBfEh7mD/4YRqIawo7yAQXRdiDXFaIp8RL63aZPebpbHtHwoYCKogRDnaCcdwmh1WHzwj0tStoTWRQ/9XVApQC5r4hsKMTelZqtczRq3o3gUSzkp7qPJRmDYsbox4BrSIT5lRoMDjSTVNlBFQFX98f0JbcmsQcDxaedoTAMUUMoMvoJHHtsf6sZ5NncCb99a8OanjZ7lytAJu2phkoasS46kY4a3QVrYABGtPAHKtuhDEsrGEZNCc6oz1kfN6lJQDMiJ16R3y2Cp
+ reg04.atlas.ripe.net ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCpFuG/G4T1kjtyuLEyr7ySt7KAlAfL5D8VMYf+Xn+tq4GuImwoBlYVcWR6AH1ugcoHxryS5r9EY48FvxtPmi/RTJPejYP9SP1+/VgAm+sowG40FWs4wsh2oJG2jC/tcd7832nUfkYtDMvhPKLYD9z9T3RE2pQ7YGGnymrBps79X6pPc7DuCBdt+9yXiy56OH3dtf5EU/URNULPhm4qGluWq1wf66XgTJuloHXOU2/sozXBwtJNNzFkFq07K0+AUd4dWt0LuzgncF02W6czFW/n7pY365deK7IFiG4ssCOLhsgehw48r0lYlKlzXaZtDtYyHCXE2tIXpRd0aEAXJzc3
+ 193.0.19.247 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCpFuG/G4T1kjtyuLEyr7ySt7KAlAfL5D8VMYf+Xn+tq4GuImwoBlYVcWR6AH1ugcoHxryS5r9EY48FvxtPmi/RTJPejYP9SP1+/VgAm+sowG40FWs4wsh2oJG2jC/tcd7832nUfkYtDMvhPKLYD9z9T3RE2pQ7YGGnymrBps79X6pPc7DuCBdt+9yXiy56OH3dtf5EU/URNULPhm4qGluWq1wf66XgTJuloHXOU2/sozXBwtJNNzFkFq07K0+AUd4dWt0LuzgncF02W6czFW/n7pY365deK7IFiG4ssCOLhsgehw48r0lYlKlzXaZtDtYyHCXE2tIXpRd0aEAXJzc3
+-2001:67c:2e8:11::c100:13f7 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCpFuG/G4T1kjtyuLEyr7ySt7KAlAfL5D8VMYf+Xn+tq4GuImwoBlYVcWR6AH1ugcoHxryS5r9EY48FvxtPmi/RTJPejYP9SP1+/VgAm+sowG40FWs4wsh2oJG2jC/tcd7832nUfkYtDMvhPKLYD9z9T3RE2pQ7YGGnymrBps79X6pPc7DuCBdt+9yXiy56OH3dtf5EU/URNULPhm4qGluWq1wf66XgTJuloHXOU2/sozXBwtJNNzFkFq07K0+AUd4dWt0LuzgncF02W6czFW/n7pY365deK7IFiG4ssCOLhsgehw48r0lYlKlzXaZtDtYyHCXE2tIXpRd0aEAXJzc3
+ 
+ reg01-test.atlas.ripe.net ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA3ExHZJtLuv4TLn/zZMPiAUzXO8At8Sf+TOVH7JqrPtNDx+6UiRSAYtDmkb7qp2YWBDThCwI7z8jrKIpDhKRpHEWgOW8pczek5tZvATu5DjgmBjH2k36efeVECGry6+QHn+P3v3mi3g6qwF+1+pjdiXRr0r2pgAoRumMVU1ZsBHkMmvmuo6P8g2de7NWi5wdGUM2EhWghnESBmzr1++bOVWduv0ikA75PZbdj+p32hsjnJGkIM8YgX+lvVuyXTY0iN/HjjlL5+2Ii2iCFntmolEIw7ZDQBQNrIXjXK7Udlrqxn14ywAOD97kO527zmAcYP3pqznJpw8FCp4FxKOXNtQ==
+ 193.0.19.181 ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA3ExHZJtLuv4TLn/zZMPiAUzXO8At8Sf+TOVH7JqrPtNDx+6UiRSAYtDmkb7qp2YWBDThCwI7z8jrKIpDhKRpHEWgOW8pczek5tZvATu5DjgmBjH2k36efeVECGry6+QHn+P3v3mi3g6qwF+1+pjdiXRr0r2pgAoRumMVU1ZsBHkMmvmuo6P8g2de7NWi5wdGUM2EhWghnESBmzr1++bOVWduv0ikA75PZbdj+p32hsjnJGkIM8YgX+lvVuyXTY0iN/HjjlL5+2Ii2iCFntmolEIw7ZDQBQNrIXjXK7Udlrqxn14ywAOD97kO527zmAcYP3pqznJpw8FCp4FxKOXNtQ==
+-2001:67c:2e8:11::c100:13b5 ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA3ExHZJtLuv4TLn/zZMPiAUzXO8At8Sf+TOVH7JqrPtNDx+6UiRSAYtDmkb7qp2YWBDThCwI7z8jrKIpDhKRpHEWgOW8pczek5tZvATu5DjgmBjH2k36efeVECGry6+QHn+P3v3mi3g6qwF+1+pjdiXRr0r2pgAoRumMVU1ZsBHkMmvmuo6P8g2de7NWi5wdGUM2EhWghnESBmzr1++bOVWduv0ikA75PZbdj+p32hsjnJGkIM8YgX+lvVuyXTY0iN/HjjlL5+2Ii2iCFntmolEIw7ZDQBQNrIXjXK7Udlrqxn14ywAOD97kO527zmAcYP3pqznJpw8FCp4FxKOXNtQ==
+ reg02-test.atlas.ripe.net ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAxhrmPoZBlvIwDThjIxrxW/JhH2hfmfcJm5czCwt39OrA0Done8/KE8f4EkyI+apsT2nfw43hPZCjZrNSE8jqqDLvy7JBZixJdgj+hkXzZLVeLM7is3IOMmOsSxScKgjdZNQpKsmFe9IUCCzTXnhWmE6pry8t+3ulcLhjuz07tM6TaL4OwVDCw50uaCHkuHu7wpseU2dta28fB6JI5k7Q5HKhH9VAiFWpMRMq8UHUlCRS/WlthYtMG6VL2d2h4igXk5pqNAWQvMC9ovCHAWjf+pkhspJSesR7Z+IW9GSdtKA5XAGGIXClz8O3UD+COGpbX1G3dgsr5ZOE3Q1ZhybqLQ==
+ 193.0.19.26 ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAxhrmPoZBlvIwDThjIxrxW/JhH2hfmfcJm5czCwt39OrA0Done8/KE8f4EkyI+apsT2nfw43hPZCjZrNSE8jqqDLvy7JBZixJdgj+hkXzZLVeLM7is3IOMmOsSxScKgjdZNQpKsmFe9IUCCzTXnhWmE6pry8t+3ulcLhjuz07tM6TaL4OwVDCw50uaCHkuHu7wpseU2dta28fB6JI5k7Q5HKhH9VAiFWpMRMq8UHUlCRS/WlthYtMG6VL2d2h4igXk5pqNAWQvMC9ovCHAWjf+pkhspJSesR7Z+IW9GSdtKA5XAGGIXClz8O3UD+COGpbX1G3dgsr5ZOE3Q1ZhybqLQ==
+-2001:67c:2e8:11::c100:131a ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAxhrmPoZBlvIwDThjIxrxW/JhH2hfmfcJm5czCwt39OrA0Done8/KE8f4EkyI+apsT2nfw43hPZCjZrNSE8jqqDLvy7JBZixJdgj+hkXzZLVeLM7is3IOMmOsSxScKgjdZNQpKsmFe9IUCCzTXnhWmE6pry8t+3ulcLhjuz07tM6TaL4OwVDCw50uaCHkuHu7wpseU2dta28fB6JI5k7Q5HKhH9VAiFWpMRMq8UHUlCRS/WlthYtMG6VL2d2h4igXk5pqNAWQvMC9ovCHAWjf+pkhspJSesR7Z+IW9GSdtKA5XAGGIXClz8O3UD+COGpbX1G3dgsr5ZOE3Q1ZhybqLQ==
+ 
+ reg01-dev.atlas.ripe.net ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA65LBLf30PqFNQEDo+Aly6C+3hWeOoJpbY5qvFgounNPH4puCqYg8uEMNSoXeStm72d1ghKUEvP6O3+W62WgkoBXZJOh8jhRviDOdd23m6Xfmkd0PMmjTx2gjTFsbxrYuuuTJy+ljyWe2FIp8DKRHbyQQ4tAeQ6u9btkqQluFTZCntdZExakjiHPBlA/cmj6JOP1H2VWQVVVK8bR/pzxVPprJ81XyWyFHbIwU47F3wurpjYN+Fd5cFYJbb3Q7V6sDLE2oxFsqwsX8yAyZYh4j7pI769JLGjcUGyoW+b0MLpu46VSUy756jlhvQImIMzGX7Z1sBxj/zO5dioP3vAUo/w==
+ 193.0.19.93 ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA65LBLf30PqFNQEDo+Aly6C+3hWeOoJpbY5qvFgounNPH4puCqYg8uEMNSoXeStm72d1ghKUEvP6O3+W62WgkoBXZJOh8jhRviDOdd23m6Xfmkd0PMmjTx2gjTFsbxrYuuuTJy+ljyWe2FIp8DKRHbyQQ4tAeQ6u9btkqQluFTZCntdZExakjiHPBlA/cmj6JOP1H2VWQVVVK8bR/pzxVPprJ81XyWyFHbIwU47F3wurpjYN+Fd5cFYJbb3Q7V6sDLE2oxFsqwsX8yAyZYh4j7pI769JLGjcUGyoW+b0MLpu46VSUy756jlhvQImIMzGX7Z1sBxj/zO5dioP3vAUo/w==
+-2001:67c:2e8:11::c100:135d ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA65LBLf30PqFNQEDo+Aly6C+3hWeOoJpbY5qvFgounNPH4puCqYg8uEMNSoXeStm72d1ghKUEvP6O3+W62WgkoBXZJOh8jhRviDOdd23m6Xfmkd0PMmjTx2gjTFsbxrYuuuTJy+ljyWe2FIp8DKRHbyQQ4tAeQ6u9btkqQluFTZCntdZExakjiHPBlA/cmj6JOP1H2VWQVVVK8bR/pzxVPprJ81XyWyFHbIwU47F3wurpjYN+Fd5cFYJbb3Q7V6sDLE2oxFsqwsX8yAyZYh4j7pI769JLGjcUGyoW+b0MLpu46VSUy756jlhvQImIMzGX7Z1sBxj/zO5dioP3vAUo/w==
+ reg02-dev.atlas.ripe.net ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAzddu7ATb63Q7/g2rZN+ZivwfV9KI/YN+3R3yuKlctz4TWGInClCqt+hMtVyuKxDqRUA7zFq7JMLuVCPJZt2UlOQJdvy05vYKQKuy8lxPw28m0TnVEWbI4SWvlcL+Sz5a/D/qd/Eg7gLWJTB7L5Z345PH6Ip+l2N8TeiCPWSrBt5bJHecbQptWnG+giafaNCsv3bJM+sirnpWXk9OpycBA9xK2UzKA7dMEsfI5KdRr791R2uMgfaAtR2JyW3R1MzY2Bf0s1VvVT1YlaoJlL7fAc8628V8oea6o/YjUi/Yb1ldmFIGUIUqNpJra5sgrZ5UND+F4BZbqbyaZObwgI6XzQ==
+ 193.0.19.92 ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAzddu7ATb63Q7/g2rZN+ZivwfV9KI/YN+3R3yuKlctz4TWGInClCqt+hMtVyuKxDqRUA7zFq7JMLuVCPJZt2UlOQJdvy05vYKQKuy8lxPw28m0TnVEWbI4SWvlcL+Sz5a/D/qd/Eg7gLWJTB7L5Z345PH6Ip+l2N8TeiCPWSrBt5bJHecbQptWnG+giafaNCsv3bJM+sirnpWXk9OpycBA9xK2UzKA7dMEsfI5KdRr791R2uMgfaAtR2JyW3R1MzY2Bf0s1VvVT1YlaoJlL7fAc8628V8oea6o/YjUi/Yb1ldmFIGUIUqNpJra5sgrZ5UND+F4BZbqbyaZObwgI6XzQ==
+-2001:67c:2e8:11::c100:135c ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAzddu7ATb63Q7/g2rZN+ZivwfV9KI/YN+3R3yuKlctz4TWGInClCqt+hMtVyuKxDqRUA7zFq7JMLuVCPJZt2UlOQJdvy05vYKQKuy8lxPw28m0TnVEWbI4SWvlcL+Sz5a/D/qd/Eg7gLWJTB7L5Z345PH6Ip+l2N8TeiCPWSrBt5bJHecbQptWnG+giafaNCsv3bJM+sirnpWXk9OpycBA9xK2UzKA7dMEsfI5KdRr791R2uMgfaAtR2JyW3R1MzY2Bf0s1VvVT1YlaoJlL7fAc8628V8oea6o/YjUi/Yb1ldmFIGUIUqNpJra5sgrZ5UND+F4BZbqbyaZObwgI6XzQ==
+Index: 1.0-r0/git/atlas-config/etc/reg_servers.sh.dev
+===================================================================
+--- 1.0-r0.orig/git/atlas-config/etc/reg_servers.sh.dev
++++ 1.0-r0/git/atlas-config/etc/reg_servers.sh.dev
+@@ -1,6 +1,8 @@
+ REG_1_HOST=reg01-dev.atlas.ripe.net
+ REG_2_HOST=193.0.19.93
+-REG_3_HOST=2001:67c:2e8:11::c100:135d
++#REG_3_HOST=2001:67c:2e8:11::c100:135d
++REG_3_HOST=reg01-dev.atlas.ripe.net
+ REG_4_HOST=reg02-dev.atlas.ripe.net
+ REG_5_HOST=193.0.19.92
+-REG_6_HOST=2001:67c:2e8:11::c100:135c
++#REG_6_HOST=2001:67c:2e8:11::c100:135c
++REG_6_HOST=reg02-dev.atlas.ripe.net
+Index: 1.0-r0/git/atlas-config/etc/reg_servers.sh.prod
+===================================================================
+--- 1.0-r0.orig/git/atlas-config/etc/reg_servers.sh.prod
++++ 1.0-r0/git/atlas-config/etc/reg_servers.sh.prod
+@@ -1,6 +1,8 @@
+ REG_1_HOST=reg03.atlas.ripe.net
+ REG_2_HOST=193.0.19.246
+-REG_3_HOST=2001:67c:2e8:11::c100:13f6
++#REG_3_HOST=2001:67c:2e8:11::c100:13f6
++REG_3_HOST=reg03.atlas.ripe.net
+ REG_4_HOST=reg04.atlas.ripe.net
+ REG_5_HOST=193.0.19.247
+-REG_6_HOST=2001:67c:2e8:11::c100:13f7
++#REG_6_HOST=2001:67c:2e8:11::c100:13f7
++REG_6_HOST=reg04.atlas.ripe.net
+Index: 1.0-r0/git/atlas-config/etc/reg_servers.sh.test
+===================================================================
+--- 1.0-r0.orig/git/atlas-config/etc/reg_servers.sh.test
++++ 1.0-r0/git/atlas-config/etc/reg_servers.sh.test
+@@ -1,6 +1,8 @@
+ REG_1_HOST=reg01-test.atlas.ripe.net
+ REG_2_HOST=193.0.19.181
+-REG_3_HOST=2001:67c:2e8:11::c100:13b5
++#REG_3_HOST=2001:67c:2e8:11::c100:13b5
++REG_3_HOST=reg01-test.atlas.ripe.net
+ REG_4_HOST=reg02-test.atlas.ripe.net
+ REG_5_HOST=193.0.19.26
+-REG_6_HOST=2001:67c:2e8:11::c100:131a
++#REG_6_HOST=2001:67c:2e8:11::c100:131a
++REG_6_HOST=reg02-test.atlas.ripe.net
+Index: 1.0-r0/git/bin/arch/linux/linux-functions.sh
+===================================================================
+--- 1.0-r0.orig/git/bin/arch/linux/linux-functions.sh
++++ 1.0-r0/git/bin/arch/linux/linux-functions.sh
+@@ -130,15 +130,17 @@ sos()
+ }
+ ssh()
+ {
+-	/usr/bin/ssh -o "ServerAliveInterval 60" \
+-		-o "StrictHostKeyChecking yes" \
+-		-o "UserKnownHostsFile $SSH_DIR/known_hosts" "$@"
++	#/usr/bin/ssh -o "ServerAliveInterval 60" \
++	#	-o "StrictHostKeyChecking yes" \
++	#	-o "UserKnownHostsFile $SSH_DIR/known_hosts" "$@"
++	/usr/bin/ssh -K 60 "$@"
+ }
+ ssh_exec()
+ {
+-	exec /usr/bin/ssh -o "ServerAliveInterval 60"\
+-		-o "StrictHostKeyChecking yes" \
+-		-o "UserKnownHostsFile $SSH_DIR/known_hosts" "$@"
++	#exec /usr/bin/ssh -o "ServerAliveInterval 60"\
++	#	-o "StrictHostKeyChecking yes" \
++	#	-o "UserKnownHostsFile $SSH_DIR/known_hosts" "$@"
++	exec /usr/bin/ssh -K 60 "$@"
+ }
+ get_ether_addr()
+ {
